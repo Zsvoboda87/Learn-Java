@@ -1,13 +1,15 @@
+import java.util.Scanner;
+
 public class FahrenheitToCelsius {
     public static void main(String[] args) {
-        int saturdayFahrenheit;
-        int sundayFahrenheit;
-        saturdayFahrenheit = 78;
-        sundayFahrenheit = 81;
-        double saturdayCelsius = (5.0/9) * (saturdayFahrenheit-32);
-        double sundayCelsius = (5.0/9) * (sundayFahrenheit-32);
-        System.out.println("Weekend Averages");
-        System.out.println("Saturday: " + saturdayCelsius);
-        System.out.println("Sunday: " + sundayCelsius);
+        Scanner input = new Scanner(System.in); // read keyboard input
+        System.out.print("Enter a Fahrenheit value: ");
+        int fahrenheit = input.nextInt();
+       
+        System.out.print("Enter a day of the week: ");
+        String day = input.next();
+        double celsius = (5.0/9) * (fahrenheit - 32);
+        System.out.printf("%s Fahrenheit: %d\n", day, fahrenheit);
+        System.out.printf("%s Celsius:    %.1f\n", day, celsius); 
     }
-}
+} 
