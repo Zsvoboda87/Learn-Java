@@ -1,3 +1,5 @@
+import java.util.Scanner
+
 public class Powers {
     public static void main(String[] args) {
         final int LIMIT =40;
